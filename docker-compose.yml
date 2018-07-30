@@ -1,0 +1,22 @@
+version: '2'
+services:
+  sp:
+    restart: always
+    build: ./sp
+    command: gunicorn -w 4 --bind :5000 sp:app
+    expose:
+     - "5000"
+    ports:
+     - "5000:5000"
+  nginx:
+    restart: always
+    build: ./nginx
+    links:
+     - "sp"
+    expose:
+     - "80" 
+    ports:
+     - "80:80"
+
+  
+ 
