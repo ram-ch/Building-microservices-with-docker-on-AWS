@@ -1,2 +1,1 @@
-# -Nginx-Gunicorn-Flask-on_docker
-An attempt to configure and run Nginx, gunicorn and flask app as docker containers
+Dockerizing FLASK app with GUNICORN[wsgi] & NGINX[web server] on AWS ubuntu 16.04
