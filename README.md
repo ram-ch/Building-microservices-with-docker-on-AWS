@@ -18,3 +18,5 @@
 1. Managing with Ranger console
 
 
+## Introduction: ##
+This project aims to build and run a python flask application with gunicorn[Web Server Gateway Interface] and Nginx[front end web server for reverse proxy] as Docker containers on AWS ubuntu 16.04 server. The project is a complete ground up from creation of an AWS instance to deploying containers and managing them on Rancher.
