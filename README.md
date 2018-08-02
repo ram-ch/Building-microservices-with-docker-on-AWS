@@ -6,8 +6,8 @@
 1. Installing required applications
 1. Directory structure
 1. Creating directories and files
-   - /home/microservices/sp
-   - /home/microservices/sp/dockerfile
+   * /home/microservices/sp
+   * /home/microservices/sp/dockerfile
    1. /home/microservices/sp/requirements.txt
    1. /home/microservices/sp/sp.py
    1. /home/microservices/nginx
