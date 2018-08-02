@@ -216,6 +216,39 @@ Finally run the command
 ## 6. Managing with Ranger console
 **Rancher** is Open source container management platform for deploying and managing containers
 
+Create another AWS instance and lets call it as Rancher master. Rancher master will be used to maintain the containers deployed on the Rancher worker(current AWS instance)
+
+STEP1: Follow all the steps for creating an AWS instance as described above
+
+STEP2: Install Rancher Server       
+````
+HOST_VOLUME=$HOME/rancher-data/mysql
+sudo mkdir -p $HOST_VOLUME
+````
+
+STEP3: Run the server     
+````
+sudo docker run -d \
+-v $HOST_VOLUME:/var/lib/mysql \
+--restart=unless-stopped \
+-p 8080:8080 \
+rancher/server
+````
+STEP:4 Open the Rancher console on https://RancherMaster.server.ip.here:8080
+
+STEP:5 Create username and password for the first time
+
+STEP:6 add Rancherworker as host
+* Go to add host tab
+* Provide the RancherMaster.server.ip.here in the field
+* copy the code block
+* execute it in the Rancherworker server 
+
+Note: Make sure your RancherWorker is up and running
+
+You should see your Rancher server in the console with all the running containers
+#Vola!!!#
+
 
 
 
