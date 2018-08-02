@@ -60,37 +60,35 @@ Create dockerfile inside directory sp
 
 **Dockerfile** consists of a set of instructions to the docker for building the container. This means the docker is installing an ubuntu 16.04 OS, installing python, creating the required directory structure inside the container and finally exposing the required ports of the container. Later these ports will be mapped to the ports of the server
 
-`
-# pull ubuntu image
+`pull ubuntu image
 FROM ubuntu:16.04
 
-# Pull python image
+Pull python image
 FROM python:2.7
 
-# update the current version
+update the current version
 RUN apt-get update -y
 
-# Install pip and others build tools
+Install pip and others build tools
 RUN apt-get install -y python-pip python-dev build-essential libssl-dev libffi-dev 
 
-# Make directory sp
+Make directory sp
 RUN mkdir /sp
 
-# Copy all files from sp
+Copy all files from sp
 COPY . /sp
 
-# make Working directory sp
+make Working directory sp
 WORKDIR /sp
 
-# upgrade pip
+upgrade pip
 RUN pip install --upgrade pip
 
-# Install required libraries
+Install required libraries
 RUN pip install -r requirements.txt
 
-# Expose port
-EXPOSE 5000
-`
+Expose port
+EXPOSE 5000`
 
 
 
