@@ -63,24 +63,58 @@ Create dockerfile inside directory sp
 ````
 #pull ubuntu image
 FROM ubuntu:16.04
+
 #Pull python image
 FROM python:2.7
+
 #update the current version
 RUN apt-get update -y
+
 #Install pip and others build tools
 RUN apt-get install -y python-pip python-dev build-essential libssl-dev libffi-dev 
+
 #Make directory sp
 RUN mkdir /sp
+
 #Copy all files from sp
 COPY . /sp
-make Working directory sp
+
+#make Working directory sp
 WORKDIR /sp
-upgrade pip
+
+#upgrade pip
 RUN pip install --upgrade pip
-Install required libraries
+
+#Install required libraries
 RUN pip install -r requirements.txt
-Expose port
+
+#Expose port
 EXPOSE 5000
+````
+Create requirements.txt inside directory sp
+`$ sudo vim /home/microservices/sp/requirements.txt`
+
+**requirements.txt** include the required libraries for the python application
+````
+Flask==1.0.2
+requests==2.18.4
+gunicorn==19.9.0
+````
+
+Create sp.py inside directory sp
+`$ sudo vim /home/microservices/sp/sp.py`
+
+**sp.py** is a sample python flask application
+````
+from flask import Flask
+app = Flask(__name__)
+
+@app.route("/")
+def hello():
+        return "SP app"		
+        
+if __name__ == "__main__":
+    app.run(host="0.0.0.0")
 ````
 
 
