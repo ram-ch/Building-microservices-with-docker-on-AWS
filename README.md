@@ -246,8 +246,10 @@ STEP:6 add Rancherworker as host
 
 Note: Make sure your RancherWorker is up and running
 
-You should see your Rancher server in the console with all the running containers
-#Vola!!!#
+You should see your Rancher server in the console with all the running containers     
+
+
+# Vola!!!# :+1:
 
 
 
