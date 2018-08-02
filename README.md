@@ -1,6 +1,6 @@
 # Building microservices with docker on AWS
 
-Table of Contents:
+**Table of Contents:**
 1. Introduction
 1. Creating an AWS ubuntu 16.04 server
 1. Installing required applications
