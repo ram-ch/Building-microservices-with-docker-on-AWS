@@ -15,4 +15,6 @@
    1. /home/microservices/nginx/web.conf
    1. /home/microservices/docker-compose.yml
 1. The `<sudo docker-compose up -d>`
+1. Managing with Ranger console
+1. Future scope
 
