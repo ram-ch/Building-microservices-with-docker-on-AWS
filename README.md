@@ -213,4 +213,13 @@ services:
 Finally run the command    
 `$ sudo docker-compose up -d`    
 
+## 6. Managing with Ranger console
+**Rancher** is Open source container management platform for deploying and managing containers
+
+
+
+
+
+
+
 
